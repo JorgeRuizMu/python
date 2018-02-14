@@ -11,3 +11,5 @@ print funciones.par_impar(3)
 
 
 funciones.alta_cliente("045525255P","Jorge","Ruiz","Munyoz","Perez","lopez")
+
+print funciones.iniciales("jorge","ruiz","munyoz")
