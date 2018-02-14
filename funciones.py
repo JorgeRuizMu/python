@@ -10,3 +10,11 @@ def parimpar(num):
 	else:
 		resultado = "impar"
 	return resultado
+def par_impar(num):
+	resultado = "par" if(num%2==0) else "impar"
+	return resultado
+def alta_cliente(dni,nombre,*apellidos):
+	print dni
+	print nombre
+	for parametro in apellidos:
+		print parametro
