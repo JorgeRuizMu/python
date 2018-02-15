@@ -22,10 +22,20 @@ def entorno():
 def gordos(directorio,size):
 	limpiar()
 	for elemento in os.listdir(directorio):
+		medida = size[-1:]
 		ruta = directorio+"/"+elemento
 		if os.path.isfile(ruta):
-			if os.path.getsize(ruta) > int(size):
-				print elemento+" "+str(os.path.getsize(ruta))
+			if os.path.getsize(ruta) > int(size[:-1]):
+				if medida == "K":
+					pesofinal = float(os.path.getsize(ruta))/1024
+					print elemento+" "+str(pesofinal)+medida
 
 def limpiar():
 	os.system("clear")
+
+def visualizar(fichero):
+	archivo = open(fichero,"r")
+	contenido = archivo.read()
+	archivo.close()
+	return contenido
+
