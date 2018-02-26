@@ -39,3 +39,13 @@ def visualizar(fichero):
 	archivo.close()
 	return contenido
 
+def cp(fichero1,fichero2):
+	if os.access(fichero1,0):
+		archivo1 = open(fichero1,"r")
+		archivo2 = open(fichero2,"a")
+		while True:
+			linea = archivo1.readline()
+			if not linea:break
+			archivo2.write(linea)
+		archivo1.close()
+		archivo2.close()
